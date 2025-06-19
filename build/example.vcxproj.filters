@@ -4,6 +4,9 @@
     <ClCompile Include="C:\Users\Nihhit\projects\pybind_test_1\cpp\bindings.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Nihhit\projects\pybind_test_1\cpp\array_ops.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\Nihhit\projects\pybind_test_1\cpp\CMakeLists.txt" />

@@ -342,6 +342,8 @@ _Python3_INCLUDE_DIR:INTERNAL=C:/Users/Nihhit/AppData/Local/Programs/Python/Pyth
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;13;5;64;<none>;cp313-win_amd64;;C:\Users\Nihhit\AppData\Local\Programs\Python\Python313\Lib;C:\Users\Nihhit\projects\pybind_test_1\pybind_test_1_env\Lib;C:\Users\Nihhit\projects\pybind_test_1\pybind_test_1_env\Lib\site-packages;C:\Users\Nihhit\projects\pybind_test_1\pybind_test_1_env\Lib\site-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=ab64faa43ce54429132091b2427d50ab
+//Interpreter reason failure
+_Python3_Interpreter_REASON_FAILURE:INTERNAL=
 //Path to a library.
 _Python3_LIBRARY_DEBUG:INTERNAL=C:/Users/Nihhit/AppData/Local/Programs/Python/Python313/libs/python313_d.lib
 //Path to a library.

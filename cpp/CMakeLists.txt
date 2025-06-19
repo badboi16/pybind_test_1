@@ -14,7 +14,10 @@ include_directories(
 link_directories("C:/Users/Nihhit/AppData/Local/Programs/Python/Python313/libs")
 
 # Step 4: Define the library to build
-add_library(example MODULE bindings.cpp)
+add_library(example MODULE 
+	bindings.cpp
+	array_ops.cpp
+)
 
 # Step 5: Link against the Python lib (important: after add_library)
 target_link_libraries(example PRIVATE python313)

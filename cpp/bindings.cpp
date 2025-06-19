@@ -1,4 +1,5 @@
 #include <pybind11/pybind11.h>
+#include "array_ops.h"
 #include <iostream>
 #include <stdio.h>
 
@@ -15,5 +16,5 @@ int subtract(int a, int b) {
 PYBIND11_MODULE(example, m) {
     m.def("add", &add, "Add two numbers");
     m.def("subtract", &subtract, "Subtract two numbers");
-
+    m.def("double_array", &double_array, "Double each element in a NumPy array");
 }
