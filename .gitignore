@@ -1,0 +1,8 @@
+# Virtual environment
+pybind_test_1_env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.log
