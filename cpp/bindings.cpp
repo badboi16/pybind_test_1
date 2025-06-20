@@ -17,4 +17,6 @@ PYBIND11_MODULE(example, m) {
     m.def("add", &add, "Add two numbers");
     m.def("subtract", &subtract, "Subtract two numbers");
     m.def("double_array", &double_array, "Double each element in a NumPy array");
+    m.def("add_2D_array", &add_2D_array, "Add each element in a 2D NumPy array");
+
 }

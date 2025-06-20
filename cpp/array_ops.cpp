@@ -1,4 +1,5 @@
 #include "array_ops.h"
+#include <stdio.h>
 
 namespace py = pybind11;
 
@@ -44,4 +45,45 @@ py::array_t<double> double_array(py::array_t<double> input) {
 
 	return result;
 
+}
+
+void add_2D_array(py::array_t<double> input) {
+
+	auto buf = input.request();
+	double* ptr = static_cast<double*>(buf.ptr);
+	size_t n = buf.size;
+
+	printf("Size of 2D array passed: %lf\n", double(n));
+
+	// Let's check dimensions of the array passed to this function
+	size_t rows = buf.shape[0]; // eg. bars in data, matching vector indices
+	size_t cols = buf.shape[1];
+	printf("Dimensions of array passed: %lf x %lf\n", double(rows), double(cols));
+
+	// Let's initialize new array of the same size
+	py::array_t<double> new_array({ rows, cols });
+
+	// When you get buf.ptr or use unchecked<N>(), you are operating directly on
+	// the memory owned by the Python NumPy array. This means there's no overhead
+	// of copying large datasets between Python and C++ memory spaces.
+
+	// Let's get the new array's buf_info and ptr
+	auto new_buf = new_array.request();
+	double* new_ptr = static_cast<double*>(new_buf.ptr);
+
+	for (size_t i = 0; i < rows; ++i) {
+		printf("\n");
+		for (size_t j = 0; j < cols; ++j) {
+			printf("%lf --- ", double(ptr[i * cols + j]));
+			// assign to new array 2x the values in passed array
+			new_ptr[i * cols + j] = 2 * ptr[i * cols + j];
+		}
+	}
+	printf("\nNow printing new 2x array...");
+	for (size_t i = 0; i < rows; ++i) {
+	printf("\n");
+		for (size_t j = 0; j < cols; ++j) {
+			printf("%lf --- ", double(new_ptr[i * cols + j]));
+		}
+	}
 }

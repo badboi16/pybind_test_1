@@ -54,3 +54,8 @@ pythonlib313 found at "C:/Users/Nihhit/projects/pybind_test_1/pybind_test_1_env/
 
 
 After any changes I make to the cpp file, I need to run ||->cmake --build . --config Release|| inside the build folder
+
+
+
+When passing ndarray of date,time,OHLC, i can simply send 6 different ndarrays instead of a single nx6 ndarray
+This will simplify the work-flow at source
